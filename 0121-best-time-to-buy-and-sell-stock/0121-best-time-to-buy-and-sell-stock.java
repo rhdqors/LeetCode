@@ -2,8 +2,6 @@ class Solution {
     public int maxProfit(int[] prices) {
         int min = prices[0];
         int max = 0;
-        int minIndex = 0;
-        int maxIndex = 0;
         
         System.out.println("1 min = " + min);
         System.out.println("1 max = " + max);
