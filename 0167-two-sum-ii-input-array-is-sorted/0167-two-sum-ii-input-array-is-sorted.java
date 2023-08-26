@@ -4,30 +4,19 @@ class Solution {
         int right = numbers.length-1;
         int[] result = new int[2];
         
-        if (numbers[left] + numbers[right] == target) {
-            result[0] = left+1;
-            result[1] = right+1;
-        }  
-        
         while (left < right) {
-            if (numbers[left] + numbers[right] > target) {
-                right--;
-            } else {
-                left++;
-            }
-            
-            if (numbers[left] + numbers[right] == target) {
-                if (left == right) {
-                    result[0] = left;
-                    result[1] = right+2;
-                    break;
-                }
+            int sum = numbers[left] + numbers[right];
+            if (sum == target) {
                 result[0] = left+1;
                 result[1] = right+1;
-                break;
+                return result;
+            } else if (sum < target) {
+                left++;
+            } else {
+                right--;
             }
         }
         
-        return result;
+        return result; 
     }
 }
