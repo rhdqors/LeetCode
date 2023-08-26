@@ -17,11 +17,11 @@ class Solution {
             // }
             
             if (numbers[left] + numbers[right] == target) {
-                if (left == right) {
-                    result[0] = left;
-                    result[1] = right+2;
-                    break;
-                }
+                // if (left == right) {
+                //     result[0] = left;
+                //     result[1] = right+2;
+                //     break;
+                // }
                 result[0] = left+1;
                 result[1] = right+1;
                 break;
