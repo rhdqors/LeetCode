@@ -4,9 +4,6 @@ class Solution {
         int right = numbers.length-1;
         int[] result = new int[2];
         
-        System.out.println("0 left = " + left);
-        System.out.println("0 right = " + right);
-        
         if (numbers[left] + numbers[right] == target) {
             result[0] = left+1;
             result[1] = right+1;
@@ -14,7 +11,6 @@ class Solution {
         
         while (left < right) {
             if (numbers[left] + numbers[right] > target) {
-                System.out.println(numbers[left] + " + " + numbers[right] + " = " + (numbers[left] + numbers[right]));
                 right--;
             } else {
                 left++;
@@ -28,12 +24,9 @@ class Solution {
                 }
                 result[0] = left+1;
                 result[1] = right+1;
-                System.out.println("1 left = " + left);
-                System.out.println("1 right = " + right);
                 break;
             }
         }
-
         
         return result;
     }
