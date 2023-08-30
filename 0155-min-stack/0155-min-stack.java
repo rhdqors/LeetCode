@@ -2,7 +2,7 @@ class MinStack {
     private Node dummy;
     
     public MinStack() {
-        this.dummy = new Node(Integer.MAX_VALUE, Integer.MAX_VALUE, null);
+        this.dummy = new Node(0, Integer.MAX_VALUE, null);
     }
     
     public void push(int val) {
