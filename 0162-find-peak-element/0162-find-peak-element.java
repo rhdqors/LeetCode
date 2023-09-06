@@ -16,7 +16,7 @@ class Solution {
             if(mid == 0 && nums[mid] > nums[mid+1]) { // peak가 첫 요소
                 return mid;
             }
-            if(mid == nums.length-1 && nums[mid] > nums[mid-1]) { // peak가 끝 요소
+            if(mid == nums.length-1 && nums[mid] > nums[mid-1]) { // peak가 첫 요소
                 return mid;
             }
             if( mid > 0 && mid < nums.length - 1 && target > nums[mid-1] && target > nums[mid+1]) {
