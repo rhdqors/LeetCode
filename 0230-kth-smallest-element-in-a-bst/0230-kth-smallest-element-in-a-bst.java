@@ -30,5 +30,4 @@ class Solution {
         lists.add(data);
         repeatForSort(node.right);    
     }
-    
 }
