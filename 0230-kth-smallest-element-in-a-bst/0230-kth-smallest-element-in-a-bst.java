@@ -22,10 +22,10 @@ class Solution {
         return data;
     }
     
-    
     public void repeatForSort(TreeNode node, int i) {
         if(node == null) return;
         repeatForSort(node.left, i);
+        
         count++;
         if(i == count) {
             data = node.val;
