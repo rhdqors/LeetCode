@@ -18,17 +18,17 @@ class Solution {
     ArrayList<Integer> lists = new ArrayList<>();
     
     public int kthSmallest(TreeNode root, int k) {
-        repeatAndSort(root);
+        repeatForSort(root);
         return lists.get(k-1);
     }
     
     
-    public void repeatAndSort(TreeNode node) {
+    public void repeatForSort(TreeNode node) {
         if(node == null) return;
-        repeatAndSort(node.left);
+        repeatForSort(node.left);
         data = node.val;
         lists.add(data);
-        repeatAndSort(node.right);    
+        repeatForSort(node.right);    
     }
     
 }
