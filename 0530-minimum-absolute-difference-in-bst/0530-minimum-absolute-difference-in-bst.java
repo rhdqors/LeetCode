@@ -18,15 +18,15 @@ class Solution {
     Integer data = null;
     
     public int getMinimumDifference(TreeNode root) {
-        repeat(root);
+        repeatForSort(root);
         return min;
     }
     
-    public void repeat(TreeNode node) {
+    public void repeatForSort(TreeNode node) {
         if(node == null) return ;
-        repeat(node.left);
+        repeatForSort(node.left);
         if(data != null) min = Math.min(min, node.val-data);
         data = node.val;
-        repeat(node.right);
+        repeatForSort(node.right);
     }
 }
