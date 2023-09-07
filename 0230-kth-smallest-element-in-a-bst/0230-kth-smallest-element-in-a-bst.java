@@ -15,19 +15,23 @@
  */
 class Solution {
     Integer data = null;
-    ArrayList<Integer> lists = new ArrayList<>();
+    int count = 0;
     
     public int kthSmallest(TreeNode root, int k) {
-        repeatForSort(root);
-        return lists.get(k-1);
+        repeatForSort(root, k);
+        return data;
     }
     
     
-    public void repeatForSort(TreeNode node) {
+    public void repeatForSort(TreeNode node, int i) {
         if(node == null) return;
-        repeatForSort(node.left);
-        data = node.val;
-        lists.add(data);
-        repeatForSort(node.right);    
+        repeatForSort(node.left, i);
+        count++;
+        if(i == count) {
+            data = node.val;
+            return;
+        }
+        
+        repeatForSort(node.right, i);    
     }
 }
