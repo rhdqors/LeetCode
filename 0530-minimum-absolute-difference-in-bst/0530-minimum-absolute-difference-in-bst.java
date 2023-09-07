@@ -14,7 +14,6 @@
  * }
  */
 class Solution {
-    TreeNode head;
     Integer min = Integer.MAX_VALUE;
     Integer data = null;
     
