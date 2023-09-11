@@ -17,18 +17,18 @@ class Trie {
     
     public void insert(String word) {
         Node current = this.root;
-        System.out.println("word = " + word);
-        System.out.println();
+        // System.out.println("word = " + word);
+        // System.out.println();
         for(Character w : word.toCharArray()) {
-            System.out.println("w = " + w);
+            // System.out.println("w = " + w);
             if(!current.map.containsKey(w)) {
                 current.map.put(w, new Node());
             }
             current = current.map.get(w);
-            System.out.println(current);
-            System.out.println(current.isEnd);
-            System.out.println(current.map.get(w));
-            System.out.println();
+            // System.out.println(current);
+            // System.out.println(current.isEnd);
+            // System.out.println(current.map.get(w));
+            // System.out.println();
         }
         current.isEnd = true;
     }
@@ -49,9 +49,9 @@ class Trie {
          Node current = this.root; // 한 글자의 노드
         for(int i=0; i<prefix.length(); i++) {
             char c = prefix.charAt(i); // 한글 자
-            System.out.println("c = " + c);
+            // System.out.println("c = " + c);
             current = current.map.get(c);
-            System.out.println("current = " + current);
+            // System.out.println("current = " + current);
 
             if(current == null) {
                 return false;
