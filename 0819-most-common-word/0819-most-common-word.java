@@ -3,10 +3,6 @@ class Solution {
         String result = "";
         String[] arr = paragraph.toLowerCase().split("\\W+");
         
-        // for(int i=0; i<arr.length; i++) {
-        //     arr[i] = arr[i].replaceAll("[^a-zA-Z0-9]", "");
-        // }
-        
         HashMap<String, Integer> map = new HashMap<>();
         int max = 0;
         
