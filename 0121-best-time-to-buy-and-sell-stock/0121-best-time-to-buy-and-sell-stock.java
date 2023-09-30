@@ -2,57 +2,20 @@ class Solution {
     public int maxProfit(int[] prices) {
         int min = prices[0];
         int max = 0;
-        
-        for(int i=0; i<prices.length; i++) {
+
+        for(int i=1; i<prices.length; i++) {
             if(min > prices[i]) {
                 min = prices[i];
                 System.out.println("min = " + min);
             } else if(prices[i] - min > max) {
-                max = prices[i] - min;    
+                max = prices[i] - min;
+                System.out.println("max = " + max);
             }
-            // max = Math.max(prices[i], max-min);
-            
-            System.out.println("max = " + max);
         }
-        
         
         return max;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// class Solution {
-//     public int maxProfit(int[] prices) {
-//         int min = prices[0];
-//         int max = 0;
-
-//         for(int i=1; i<prices.length; i++) {
-//             if(min > prices[i]) {
-//                 min = prices[i];
-//                 System.out.println("min = " + min);
-//             } else if(prices[i] - min > max) {
-//                 max = prices[i] - min;
-//                 System.out.println("max = " + max);
-//             }
-//         }
-        
-        
-        
-        
-        
-//         return max;
-//     }
-// }
 
 
 
