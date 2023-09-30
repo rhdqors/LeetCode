@@ -6,10 +6,10 @@ class Solution {
         for(int i=1; i<prices.length; i++) {
             if(min > prices[i]) {
                 min = prices[i];
-                System.out.println("min = " + min);
+                // System.out.println("min = " + min);
             } else if(prices[i] - min > max) {
                 max = prices[i] - min;
-                System.out.println("max = " + max);
+                // System.out.println("max = " + max);
             }
         }
         
